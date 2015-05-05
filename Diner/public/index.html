@@ -24,12 +24,22 @@
 		<input type="text" id="newDishName" placeholder="dish name">
 		<input type="text" id="newDishPrice" placeholder="dish price">
 		<input type="text" id="newDishImage" placeholder="dish image url">
+		<button id="addNewDish">Feed</button>
 	</div>
 
 	<script type ="text/template" id="dishTemplate">
 		<span class = "dish">
-			<%= dish.image %><br>
-			<%= dish.name %> <%= dish.price %>
+			<img src ="<%= dish.image_url %>">
+			<%= dish.name %>, Kz<%= dish.price %>
+			<button class = "editButton">Edit</button>
+			<button class ="deleteButton">Trash</button>
 		</span>
+		<span class ="editForm" style = "display: none">
+			<input type = "text" id = "newName<%= dish.id %>" value = "<%= dish.name %>">
+			<input type = "text" id = "newPrice<%= dish.id %>" value = "<%= dish.price %>">
+			<input type = "text" id = "newImage<%= dish.id %>" value = "<%= dish.image_url %>">
+			<button class = "updateButton">Update</button>
+		</span>
+	</script>
 </body>
 </html>
