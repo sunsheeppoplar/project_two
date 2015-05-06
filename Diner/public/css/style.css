@@ -1,0 +1,57 @@
+/*.imgContainer {
+	background-image: url("/images/original.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+
+}*/
+
+@font-face {
+	font-family: "Zombie";
+	src: url("/fonts/ZOMBIE.TTF");
+}
+
+body {
+	background-color: black;
+	text-align: center;
+	font-family: "Zombie";
+	color: rgb(222, 252, 31);
+
+}
+
+ul {
+	list-style-type: none;
+	-webkit-filter: grayscale(80%); filter: grayscale(80%);
+
+}
+
+/*add a typography page?*/
+#addNewDish {
+	font-family: "Zombie";
+}
+
+.editButton {
+	font-family: "Zombie";
+}
+
+
+.deleteButton {
+	font-family: "Zombie";
+}
+
+img {
+  height: 400px;
+  width: 500px;
+  border-radius: 45px;
+
+}
+
+.dish {
+	font-size: 30px;
+
+}
+
+header{
+	font-size: 40px;
+}

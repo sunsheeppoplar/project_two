@@ -4,58 +4,66 @@
 	<title>Angola Avante</title>
 
 	<!-- backbone scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
-    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+	<script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
 
-    <script src="/scripts/models/models.js"></script>
-    <script src="/scripts/collections/collections.js"></script>
-    <script src="/scripts/views/views.js"></script>
+	<script src="/scripts/models/models.js"></script>
+	<script src="/scripts/collections/collections.js"></script>
+	<script src="/scripts/views/views.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
 </head>
 <body>
-	<header>
-		<h1>The Walking Fed</h1>
-	</header>
-	<ul id="dishesList">
-	</ul>
+	<div class = "imgContainer">
 
-	<h3>Add a dish here:</h3>
-	<div id="addDishForm">
-		<input type="text" id="newDishName" placeholder="dish name">
-		<input type="text" id="newDishPrice" placeholder="dish price">
-		<input type="text" id="newDishImage" placeholder="dish image url">
-		<button id="addNewDish">Feed</button>
+		<header>
+			<h1>Luanda 75</h1>
+		</header>
+		
+
+		<ul id="dishesList">
+		</ul>
+
+		<h3>Add a dish here:</h3>
+		<div id="addDishForm">
+			<input type="text" id="newDishName" placeholder="dish name">
+			<input type="text" id="newDishPrice" placeholder="dish price">
+			<input type="text" id="newDishImage" placeholder="dish image url">
+			<button id="addNewDish">Feed</button>
+		</div>
+
+		<script type ="text/template" id="dishTemplate">
+			<span class = "dish">
+				<img src ="<%= dish.image_url %>"><br>
+				<%= dish.name %>, Kz<%= dish.price %><br>
+				<button class = "editButton">Edit</button>
+				<button class ="deleteButton">Trash</button>
+			</span>
+			<span class ="editForm" style = "display: none">
+				<input type = "text" id = "newName<%= dish.id %>" value = "<%= dish.name %>">
+				<input type = "text" id = "newPrice<%= dish.id %>" value = "<%= dish.price %>">
+				<input type = "text" id = "newImage<%= dish.id %>" value = "<%= dish.image_url %>">
+				<button class = "updateButton">Update</button>
+			</span>
+		</script>
+
+		<script>
+			var Elevator=function(){"use strict";function n(n,o){for(var e in o)e in n||(n[e]=o[e]);return n}function o(n,o,e,t){return n/=t/2,1>n?e/2*n*n+o:(n--,-e/2*(n*(n-2)-1)+o)}function e(n,o){for(var e in o){var t=void 0===n[e]&&"function"!=typeof e;t&&(n[e]=o[e])}return n}function t(n){v||(v=n);var e=n-v,i=o(e,w,-w,s);window.scrollTo(0,i),s>e?f=requestAnimationFrame(t):r()}function i(){T||(T=!0,w=document.documentElement.scrollTop||m.scrollTop,p||(s=1.5*w),requestAnimationFrame(t),c&&c.play())}function u(){v=null,w=null,T=!1}function r(){u(),c&&(c.pause(),c.currentTime=0),A&&A.play()}function l(){T&&(cancelAnimationFrame(f),u(),c&&(c.pause(),c.currentTime=0),window.scrollTo(0,0))}function d(n){n.addEventListener("click",i,!1)}function a(n){m=document.body;var o={duration:void 0,mainAudio:!1,preloadAudio:!0,loopAudio:!0,endAudio:!1};n=e(n,o),n.element&&d(n.element),n.duration&&(p=!0,s=n.duration),n.mainAudio&&(c=new Audio(n.mainAudio),c.setAttribute("preload",n.preloadAudio),c.setAttribute("loop",n.loopAudio)),n.endAudio&&(A=new Audio(n.endAudio),A.setAttribute("preload","true")),window.addEventListener("blur",l,!1)}var c,A,m=null,f=null,s=null,p=!1,v=null,w=null,T=!1;return n(a,{elevate:i})}();
+
+			window.onload = function() {
+				var elevator = new Elevator({
+					element: document.querySelector('.elevator-button'),
+					mainAudio: '/src/to/audio.mp3',
+					endAudio: '/src/to/end-audio.mp3'
+				});
+			}
+
+		</script>
+
+		<div class="elevator-button">Back to Top</div>
 	</div>
-
-	<script type ="text/template" id="dishTemplate">
-		<span class = "dish">
-			<img src ="<%= dish.image_url %>"><br>
-			<%= dish.name %>, Kz<%= dish.price %>
-			<button class = "editButton">Edit</button>
-			<button class ="deleteButton">Trash</button>
-		</span>
-		<span class ="editForm" style = "display: none">
-			<input type = "text" id = "newName<%= dish.id %>" value = "<%= dish.name %>">
-			<input type = "text" id = "newPrice<%= dish.id %>" value = "<%= dish.price %>">
-			<input type = "text" id = "newImage<%= dish.id %>" value = "<%= dish.image_url %>">
-			<button class = "updateButton">Update</button>
-		</span>
-	</script>
-
-	<script>
-		var Elevator=function(){"use strict";function n(n,o){for(var e in o)e in n||(n[e]=o[e]);return n}function o(n,o,e,t){return n/=t/2,1>n?e/2*n*n+o:(n--,-e/2*(n*(n-2)-1)+o)}function e(n,o){for(var e in o){var t=void 0===n[e]&&"function"!=typeof e;t&&(n[e]=o[e])}return n}function t(n){v||(v=n);var e=n-v,i=o(e,w,-w,s);window.scrollTo(0,i),s>e?f=requestAnimationFrame(t):r()}function i(){T||(T=!0,w=document.documentElement.scrollTop||m.scrollTop,p||(s=1.5*w),requestAnimationFrame(t),c&&c.play())}function u(){v=null,w=null,T=!1}function r(){u(),c&&(c.pause(),c.currentTime=0),A&&A.play()}function l(){T&&(cancelAnimationFrame(f),u(),c&&(c.pause(),c.currentTime=0),window.scrollTo(0,0))}function d(n){n.addEventListener("click",i,!1)}function a(n){m=document.body;var o={duration:void 0,mainAudio:!1,preloadAudio:!0,loopAudio:!0,endAudio:!1};n=e(n,o),n.element&&d(n.element),n.duration&&(p=!0,s=n.duration),n.mainAudio&&(c=new Audio(n.mainAudio),c.setAttribute("preload",n.preloadAudio),c.setAttribute("loop",n.loopAudio)),n.endAudio&&(A=new Audio(n.endAudio),A.setAttribute("preload","true")),window.addEventListener("blur",l,!1)}var c,A,m=null,f=null,s=null,p=!1,v=null,w=null,T=!1;return n(a,{elevate:i})}();
-
-		window.onload = function() {
-  		var elevator = new Elevator({
-		    element: document.querySelector('.elevator-button'),
-		    mainAudio: '/src/to/audio.mp3',
-		    endAudio: '/src/to/end-audio.mp3'
-		  });
-		}
-
-	</script>
-
-	<div class="elevator-button">Back to Top</div>
 
 </body>
 </html>
