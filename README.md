@@ -1,4 +1,6 @@
 # Luanda 75
+
+### background
 This project was created for the NYC General Assembly Web Development Immersive in the Lemon cohort of the March 2015 class. This was our second assigned personal project. 
 
 We were tasked with building out a zombie diner for Rick, our client who has decided to try and move in on the lucrative post-apocalyptic cuisine culture that has emerged suddenly.
