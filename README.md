@@ -6,7 +6,7 @@ We were tasked with building out a zombie diner for Rick, our client who has dec
 As the [origin](http://www.merriam-webster.com/dictionary/zombie) of zombies is possibly [Kimbundu](http://en.wikipedia.org/wiki/Kimbundu), Rick has wisely decided to serve mostly [Angolan fare](http://en.wikipedia.org/wiki/Angolan_cuisine) to his needy new clients.
 
 
-#### features
+### features
 
 #### tools of the trade
 1. The work flow and therefore development narrative can be found, additionally, [here](https://trello.com/b/ntwjS3My/general-assembly-project-two) on Trello. 
