@@ -11,7 +11,7 @@ As the [origin](http://www.merriam-webster.com/dictionary/zombie) of zombies is 
 ### features
 
 #### tools of the trade
-1. The work flow and therefore development narrative can be found, additionally, [here](https://trello.com/b/ntwjS3My/general-assembly-project-two) on Trello. 
+1. The work flow and development narrative can be found, additionally, [here](https://trello.com/b/ntwjS3My/general-assembly-project-two) on Trello. 
 2. [Elevator.js](https://github.com/tholman/elevator.js) helps us scroll back up to the page in a clean fashion with the option of including some musical elements, which in this case aren't being used. 
 3. [Backbone.js](http://backbonejs.org/) is our MV* library.
 4. [Express](http://expressjs.com/) is our server framework.
