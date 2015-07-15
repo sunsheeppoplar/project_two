@@ -74,6 +74,7 @@ $(document).ready(function() {
 
 			this.collection.create({name: name, price: price, image_url: image});
 
+			// clears out values for next set of inputs
 			nameField.val("");
 			priceField.val("");
 			imageField.val("");
