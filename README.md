@@ -22,4 +22,4 @@ As the [origin](http://www.merriam-webster.com/dictionary/zombie) of zombies is 
 To [fork](https://github.com/sunsheeppoplar/project_two) this and run it on your own localhost, press the fork button at the top right corner of this project's github page. We used [Node JS](https://nodejs.org/) to run our servers locally while working on this project. The port you'll need to listen in on is '3000.' Thanks for your interest!
 
 #### digital ocean url
-45.55.155.39:3000
+http://45.55.155.39:3000
